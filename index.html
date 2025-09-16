@@ -60,11 +60,6 @@
  <!-- App -->
     <link rel="stylesheet" href="style.css">
     <script src="./js/app.js" defer></script>
-
-
-
-
-
   
 <!-- font -->    
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -106,9 +101,9 @@
         </div>
     
       <!-- Audio Button -->
-    <button type="button" id="tombol-musik" style="display: none;" class="btn btn-light btn-sm rounded-circle btn-music" onclick="util.music(this)" data-status="true" data-url="assets/music/lagu.mp3">
-         <i class="fa-solid fa-circle-pause spin-button"></i>
-    </button>
+      <button type="button" id="tombol-musik" class="btn rounded-circle" onclick="util.music(this)" data-status="true" data-url="assets/music/lagu.mp3" style="position: fixed; top: 50%; right: 20px; transform: translateY(-50%); box-shadow: 0 4px 8px rgba(0,0,0,0.2); width: 35px; height: 35px; background-color:#ff91a4; border: none; padding: 0;">
+    <i class="fa-solid fa-circle-pause spin-button"></i>
+</button>
 
       <!-- Loading page -->
     <div class="loading-page" id="loading" style="opacity: 1;">
@@ -139,47 +134,26 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" integrity="sha256-pQBbLkFHcP1cy0C8IhoSdxlm0CtcH5yJ2ki9jjgR03c=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.12.0/tsparticles.confetti.bundle.min.js" integrity="sha256-XG5M9shcLLpu8ct5bVbu6lLVzLpfZChl+csxdyLVP18=" crossorigin="anonymous"></script>
 
-<!-- Navbar Bottom -->
-    <nav class="navbar navbar-expand fixed-bottom rounded-top-4 p-0" id="navbar-menus">
-        <ul class="navbar-nav nav-justified w-100 align-items-center">
-            <li class="nav-item">
-                <a class="nav-link" href="#home">
-                    <i class="fa-solid fa-house"></i>
-                    <span class="d-block" style="font-size: 0.7rem;">Home</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#mempelai">
-                    <i class="fa-solid fa-user-group"></i>
-                    <span class="d-block" style="font-size: 0.7rem;">Mempelai</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#acara">
-                    <i class="fa-solid fa-calendar"></i>
-                    <span class="d-block" style="font-size: 0.7rem;">Acara</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#ucapan">
-                    <i class="fa-solid fa-comment"></i>
-                    <span class="d-block" style="font-size: 0.7rem;">Ucapan</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#gallery">
-                    <i class="fa-solid fa-images"></i>
-                    <span class="d-block" style="font-size: 0.7rem;">Gallery</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#story">
-                    <i class="fa-solid fa-images"></i>
-                    <span class="d-block" style="font-size: 0.7rem;">Story</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
+<!--Navbar Bottom-->
+    <div class="fixed-bottom d-flex justify-content-center" style="bottom: 25px;">
+        <div class="d-flex justify-content-around p-2 rounded-4" style="width: 90%; max-width: 400px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); background-color: #f7f7f7;">
+            <a class="nav-link text-white text-center py-2 px-3 rounded-3" href="#home" style="background-color: #ff91a4;">
+                <i class="fa-solid fa-house"></i>
+            </a>
+            <a class="nav-link text-white text-center py-2 px-3 rounded-3" href="#mempelai" style="background-color: #ff91a4;">
+                <i class="fa-solid fa-heart"></i>
+            </a>
+            <a class="nav-link text-white text-center py-2 px-3 rounded-3" href="#acara" style="background-color: #ff91a4;">
+                <i class="fa-solid fa-calendar"></i>
+            </a>
+            <a class="nav-link text-white text-center py-2 px-3 rounded-3" href="#ucapan" style="background-color: #ff91a4;">
+                <i class="fa-solid fa-comment"></i>
+            </a>
+            <a class="nav-link text-white text-center py-2 px-3 rounded-3" href="#gallery" style="background-color: #ff91a4;">
+                <i class="fa-solid fa-images"></i>
+            </a>
+        </div>
+    </div>
 
  <!-- Main Content -->
     <main class="text-light" data-bs-spy="scroll" data-bs-target="#navbar-menus" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
