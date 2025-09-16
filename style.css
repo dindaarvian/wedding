@@ -1,0 +1,394 @@
+:root {
+    --pink: #d67183;
+    --bg: #0a0a0a;
+    --shadow: 0 2px 2px rgb(0 0 0/0.5);
+
+}
+
+body {
+    font-size: 1.2rem;
+    font-family: "Amaranth", sans-serif;
+    min-height: 2000px;
+    scrollbar-width: none !important;
+}
+
+body::-webkit-scrollbar {
+    display: none !important;
+}
+
+.hero::before{
+    content: '';
+    position:fixed;
+    inset: 0 !important;
+    width: 100%;
+    height: 100%;
+    background-image: url(assets/img/bg.gif);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+
+.hero{
+    position: relative;
+    min-height: 100vh;
+}
+
+
+.hero h1{
+    font-family: "Arimo", cursive;
+    font-size: 0.8rem;
+    color: var(--pink);
+}
+
+.hero h2{
+    font-family: "Amaranth", sans-serif;
+    font-size: 1rem;
+    color: #6b6b6b;
+}
+
+.hero h3{
+    font-family: "Niconne", sans-serif;
+    font-size: 1.2rem;
+    color: var(--pink);
+}
+
+.hero h4{
+    font-family: "Amaranth", sans-serif;
+    font-size: 0.8rem;
+    color: var(--pink);
+}
+
+.hero h5{
+    font-family: "Parisienne", sans-serif;
+    font-size: 1.8rem;
+    color: var(--pink);
+}
+
+.hero h6{
+    font-family: "Amaranth", sans-serif;
+    font-size: 0.6rem;
+    color: var(--pink);
+}
+
+.hero h7{
+    font-family: "Parisienne", sans-serif;
+    font-size: 2rem;
+    color: var(--pink);
+    text-align: left;
+}
+
+.hero h8{
+    font-family: "Amaranth", sans-serif;
+    font-size: 0.8rem;
+    color: var(--pink);
+    text-align: left;
+}
+
+.hero p{
+    font-size: 1rem;
+}
+
+.hero button{
+    color: #ffffff;
+    background-color: var(--pink);
+}
+
+.hero button:hover {
+    background-color: #736d6f;
+    color: #ffffff;
+}
+
+.img-crop {
+    width: 5rem;
+    height: 5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-crop>img {
+    display: inline;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+}
+
+.image {
+    width: 14rem;
+    height: 14rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.image>img {
+    display: inline;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+}
+
+.surah {
+    width: 18rem;
+    height: 18rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.surah>img {
+    display: inline;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+}
+
+.bg-mempelai::before{
+    background-image: url("assets/img/bg1.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-top: -0.5rem;
+    margin-bottom: -0.5rem;
+}
+
+
+.dinda {
+    width: 14rem;
+    height: 14rem;
+    position: left;
+    overflow: hidden;
+}
+
+.dinda>img {
+    display: inline;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+}
+
+.arvian {
+    width: 14rem;
+    height: 14rem;
+    position: right;
+    overflow: hidden;
+}
+
+.arvian>img {
+    display: inline;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+}
+
+.spin-button {
+    animation: spin-icon 5s linear infinite;
+}
+
+.navbar{
+    color: #ffffff;
+    background-color: var(--pink);
+}
+
+.font-nama {
+    font-family: "Parisienne", sans-serif;
+    color: var(--pink);
+    text-align: left;
+}
+
+.font-acara {
+   font-family: "Niconne", sans-serif;
+    font-size: 1rem;
+    color: var(--pink);
+}
+
+.mouse-animation {
+    padding: 0.25rem 0.625rem;
+    height: 2rem;
+    border: 0.1rem solid var(--pink);
+    border-radius: 1.4rem;
+    opacity: 0.75;
+    box-sizing: content-box;
+}
+
+.mouse-animation>.scroll-animation {
+    width: 0.25rem;
+    height: 0.625rem;
+    border-radius: 25%;
+    background-color: var(--pink) ;
+    animation-name: scroll;
+    animation-duration: 2.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+}
+
+@keyframes spin-icon {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spin-button {
+    animation: spin-icon 5s linear infinite;
+}
+
+.btn-music {
+    position: fixed;
+    bottom: 9vh !important;
+    right: 2vh !important;
+    z-index: 1055 !important;
+}
+
+
+
+.timeline {
+list-style: none;
+padding: 1.4rem 0;
+margin-top: 1rem;
+position: relative;
+}
+
+.timeline::before{
+    content: '';
+    top:0;
+    bottom: 0;
+    position: absolute;
+    width: 1px;
+    background-color: #ccc;
+    left: 50%;
+}
+
+.timeline li{
+    margin-bottom: 1.5rem;
+    position: relative;
+
+}
+
+.timeline li::before,
+.timeline li::after{
+ content: '';
+ display: table; 
+}
+
+.timeline li::after{
+    clear: both;
+}
+
+.timeline li .timeline-image{
+    width: 160px;
+    height: 160px;
+    background-color: #ccc;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.timeline li .timeline-panel{
+    width: 40%;
+    float: left;
+    border: 1px solid #ccc;
+    padding: 2rem;
+    position: relative;
+    border-radius: 8px;
+}
+
+.timeline li .timeline-panel::before{
+    content: '';
+    display: inline-block;
+    position:absolute;
+    border-top: 15px solid transparent;
+    border-left: 15px solid #ccc;
+    border-right: 0 solid #ccc;
+    border-bottom: 15px solid transparent;
+    top:80px;
+    right: -15px;
+
+}
+
+.timeline li .timeline-panel::after{
+    content: '';
+    position: absolute;
+    display: inline-block;
+
+    border-top: 14px solid transparent;
+    border-left: 14px solid #fff;
+    border-right: 0 solid #fff;
+    border-bottom: 14px solid transparent;
+    top:81px;
+    right: -13px;
+    
+
+}
+
+.timeline li.timeline-inverted .timeline-panel{
+    float: right;
+}
+
+.timeline li.timeline-inverted .timeline-panel::before{
+    border-left-width:0;
+    border-right-width:15px;
+    left: -15px;
+    right: auto;
+}
+
+.timeline li.timeline-inverted .timeline-panel::after{
+    border-left-width:0;
+    border-right-width:14px;
+    left: -13px;
+    right: auto;
+}
+
+
+
+
+
+/* Media Qouery */
+
+/* XL */
+@media (max-width:1200px){
+    .home .heart{
+        transform: translateX(-50%) translateY(45px);
+    }
+}
+/* laptop */
+@media (max-widht:992px){
+    html {
+        font-size: 75%;
+    }
+
+}
+
+/* tablet */
+@media (max-widht:768px){
+    html {
+        font-size: 65%;
+    }
+}
+
+/* mobile phone */
+@media (max-widht:576px){
+    html {
+        font-size: 60%;
+    }
+}
