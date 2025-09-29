@@ -93,7 +93,6 @@
                 <div id='tamu'>
                   <h2>Dear, </h2>
         </div>
-        
         <button type="button" class="btn btn-sm shadow rounded-4 mt-5" onclick="util.buka(this)">
             <i class="fa-solid fa-envelope-open me-2"></i>Buka Undangan
         </button>
@@ -148,12 +147,13 @@
             <a class="nav-link text-white text-center py-2 px-3 rounded-3" href="#acara" style="background-color: #d67183;">
                 <i class="fa-solid fa-calendar"></i>
             </a>
-            <a class="nav-link text-white text-center py-2 px-3 rounded-3" href="#ucapan" style="background-color: #d67183;">
-                <i class="fa-solid fa-comment"></i>
-            </a>
             <a class="nav-link text-white text-center py-2 px-3 rounded-3" href="#gallery" style="background-color: #d67183;">
                 <i class="fa-solid fa-images"></i>
             </a>
+            <a class="nav-link text-white text-center py-2 px-3 rounded-3" href="#ucapan" style="background-color: #d67183;">
+                <i class="fa-solid fa-comment"></i>
+            </a>
+            
         </div>
     </div>
 
@@ -265,8 +265,7 @@
         <div class="container">
             <div class="text-center" data-aos="fade-up" data-aos-duration="2000">
               <h2 style="font-size: 0.8rem;" class="px-2">
-                    Kehadiran dan doa restu Bapak/Ibu/Saudara/i
-                    <br>akan menjadi berkah bagi kami berdua.
+                    Kehadiran dan doa restu Bapak/Ibu/Saudara/i akan menjadi berkah bagi kami berdua.
                     <br>Semoga Allah SWT berkahi langkah kami dalam menciptakan keluarga yang penuh kasih sayang, dan keberkahan sebagaimana firman-Nya :
               </br></h2>
               <div class="annur mb-2 mx-auto">
@@ -283,7 +282,7 @@
         <div class="card-body border rounded-4 shadow p-3" style="background-color: #e6b4bd;">
         <div class="row justify-content-center">
             <div class="col-md-8 col-10 text-center">
-              <span>Bagaimana kami bertemu ?</span>
+              <h3 style="font-size: 2rem;">Cerita Kami</h3>
             </div>
         </div>
         <div class="row">
@@ -348,10 +347,52 @@
 
    <!-- Gallery --> 
         <section class="m-0 p-0" id="gallery">
-            <div class="gal mb-2 mx-auto">
-                <img src="./assets/img/gal.png" alt="gal">
-                </div></section>
-    
+           <div class="container">
+                <div class="card-body border rounded-4 shadow p-3">
+                
+                <h4 style="font-size: 2rem;">Album Foto</h4>  
+                  <div class="satu mb-2 mx-auto">
+                    <img src="./assets/img/album/14.jpg" alt="satu" onclick="util.modal(this)">
+                  </div>
+                  <div class="satu mb-2 mx-auto">
+                    <img src="./assets/img/album/1.jpg" alt="satu" onclick="util.modal(this)">
+                  </div>
+                </div>
+          </section>
+
+      <!-- Hadiah -->
+        <section class="m-0 p-0" id="hadiah">
+          <div class="container gifts">
+            <div class="py-4">
+
+                <div class="text-center">
+                    <h1 class="font-esthetic mt-0 mb-3" style="font-size: 3rem;">Love Gift</h1>
+
+                    <p class="mb-1" style="font-size: 0.9rem;">
+                        Tanpa mengurangi rasa hormat, bagi Bapak/Ibu/Saudara/i yang ingin memberikan tanda kasih untuk kami,
+                        dapat melalui :
+                    </p>
+
+                    <div class="gift">
+                        <div class="row justify-content-center">
+
+                            <div class="img-crop mb-2 mx-auto">
+                                <img src="assets/img/bca.png" alt="bca"> 
+                            </div>
+                            <div class="img-crop mb-2 mx-auto">
+                                <img src="assets/img/bsi.png" alt="bsi"> 
+                            </div>
+                            <div class="img-crop mb-2 mx-auto">
+                                <img src="assets/img/gift.png" alt="gift"> 
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
 
   <!-- Ucapan --> 
         <section class="m-0 p-0" id="ucapan">

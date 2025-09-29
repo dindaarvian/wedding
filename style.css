@@ -159,6 +159,20 @@ body::-webkit-scrollbar {
     width: 100%;
 }
 
+.satu{
+    width: 18rem;
+    height: 18rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.satu>img {
+    display: inline;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+}
+
 .gal {
     width: 18rem;
     height: 18rem;
@@ -167,6 +181,48 @@ body::-webkit-scrollbar {
 }
 
 .gal>img {
+    display: inline;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+}
+
+.bca {
+    width: 18rem;
+    height: 18rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.bca>img {
+    display: inline;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+}
+
+.bsi {
+    width: 18rem;
+    height: 18rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.bsi>img {
+    display: inline;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+}
+
+.gift {
+    width: 18rem;
+    height: 18rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.gift>img {
     display: inline;
     margin: 0 auto;
     height: auto;
