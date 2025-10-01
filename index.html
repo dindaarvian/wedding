@@ -78,7 +78,7 @@
     <main>
     
       <!-- Welcome Page -->
-     
+        
         <div class="text-center">
         <div class="img-crop mb-2 mx-auto">
           <img src="./assets/img/inisial.png" alt="inisial">
@@ -99,7 +99,7 @@
         <p style="font-size: 0.7rem; margin-top:0.5rem ;">Mohon maaf apabila terdapat kesalahan
           <br style="margin-top: 0.1rem;">dalam penulisan nama atau gelar.</br></p>
         </div>
-        
+
     
       <!-- Audio Button -->
       <button type="button" id="tombol-musik" class="btn rounded-circle" onclick="util.music(this)" data-status="true" data-url="assets/music/lagu.mp3" style="position: fixed; top: 50%; right: 20px; transform: translateY(-50%); box-shadow: 0 4px 8px rgba(0,0,0,0.2); width: 35px; height: 35px; background-color:#ff91a4; border: none; padding: 0;">
@@ -250,8 +250,9 @@
         </br>
         <section class="m-0 p-0" id="acara">
            <div class="container">
-                <div class="card-body border rounded-4 shadow p-3">
+                <div class="card-body border rounded-4 shadow p-3" style="background-image: url(assets/img/bg33.gif);">
                 <div class="text-center">
+                  <br></br>
                   <h3 style="font-size: 2rem;">Waktu Menuju Acara :</h3>
                     <div></div>
                     <div class="simply-countdown"></div>   
@@ -269,6 +270,7 @@
             <div class="akad mb-2 x-auto">
             <img src="./assets/img/akad.gif" alt="akad">
             </div></div>
+            
 
             <div class="overflow-x-hidden">
             <div class="resepsi mb-2 x-auto">
@@ -296,15 +298,15 @@
               <div class="annur mb-2 mx-auto">
                 <img src="./assets/img/annur.png" alt="annur">
                 </div>
-
             </div>
         </div>
+        <br></br>
 
   
     <!-- Story --> 
-    <section id='story' class="story mt-3 p-0" >
+    <section class="m-0 p-0" id="story">
     <div class="container">
-        <div class="card-body border rounded-4 shadow p-3" style="background-color: #e6b4bd;">
+        <div class="card-body border rounded-4 shadow p-3" style="background-color: #f7e7ea;">
         <div class="row justify-content-center">
             <div class="col-md-8 col-10 text-center">
               <h3 style="font-size: 2rem;">Cerita Kami</h3>
@@ -381,6 +383,8 @@
     </div>
     </div>
     </section>
+    <br></br>
+
 
    <!-- Gallery --> 
         <section class="m-0 p-0" id="gallery">
@@ -396,39 +400,32 @@
                   </div>
                 </div>
           </section>
+<br></br>
 
       <!-- Hadiah -->
         <section class="m-0 p-0" id="hadiah">
-          <div class="container gifts">
-            <div class="py-4">
-
-                <div class="text-center">
+          <div class="container">
+            <div class="card-body border rounded-4 shadow p-3">
                     <h5 class="font-esthetic mt-0 mb-3" style="font-size: 3rem;">Love Gift</h5>
 
-                    <p class="mb-1" style="font-size: 0.9rem;">
+                    <h2>
                         Tanpa mengurangi rasa hormat, bagi Bapak/Ibu/Saudara/i yang ingin memberikan tanda kasih untuk kami,
                         dapat melalui :
-                    </p>
+                    </h2>
 
-                    <div class="gift">
-                        <div class="row justify-content-center">
-
-                            <div class="img-crop mb-2 mx-auto">
+                      <div class="bca mb-2 mx-auto">
                                 <img src="assets/img/bca.png" alt="bca"> 
                             </div>
-                            <div class="img-crop mb-2 mx-auto">
+                            <div class="bsi mb-2 mx-auto">
                                 <img src="assets/img/bsi.png" alt="bsi"> 
                             </div>
-                            <div class="img-crop mb-2 mx-auto">
+                            <div class="gift mb-2 mx-auto">
                                 <img src="assets/img/gift.png" alt="gift"> 
                             </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         </section>
+<br></br>
 
 
   <!-- Ucapan --> 
@@ -506,79 +503,77 @@
     crossorigin="anonymous">
 </script>
 
- 
- <script>
+<script>
   simplyCountdown('.simply-countdown', {
-        year: 2025, // Target year (required)
-        month: 12, // Target month [1-12] (required)
-        day: 7, // Target day [1-31] (required)
-        hours: 9, // Target hour [0-23], default: 0
-        minutes: 0, // Target minute [0-59], default: 0
-        seconds: 0, // Target second [0-59], default: 0
-        words: { // Custom labels, with lambda for plurals
-            days: { root: 'hari', lambda: (root, n) => n > 1 ? root : root },
-            hours: { root: 'jam', lambda: (root, n) => n > 1 ? root : root },
-            minutes: { root: 'menit', lambda: (root, n) => n > 1 ? root : root },
-            seconds: { root: 'detik', lambda: (root, n) => n > 1 ? root : root }
-        },
+    year: 2025,
+    month: 12,
+    day: 7,
+    hours: 9,
+    minutes: 0,
+    seconds: 0,
+    words: {
+      days: { root: 'hari', lambda: (root, n) => n > 1 ? root : root },
+      hours: { root: 'jam', lambda: (root, n) => n > 1 ? root : root },
+      minutes: { root: 'menit', lambda: (root, n) => n > 1 ? root : root },
+      seconds: { root: 'detik', lambda: (root, n) => n > 1 ? root : root }
+    },
   });
- </script>
+</script>
 
- <script type="text/javascript">
-    window.addEventListener("load", function() {
-  const form = document.getElementById('my-form');
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    const data = new FormData(form);
-    const action = e.target.action;
-    fetch(action, {
-      method: 'POST',
-      body: data,
-    })
-    .then(() => {
-      alert("Konfirmasi kehadiran berhasil terkirim!");
-    })
+<script type="text/javascript">
+  window.addEventListener("load", function() {
+    const form = document.getElementById('my-form');
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      const action = e.target.action;
+      fetch(action, {
+        method: 'POST',
+        body: data,
+      })
+      .then(() => {
+        alert("Konfirmasi kehadiran berhasil terkirim!");
+      });
+    });
   });
-});
+</script>
 
-  </script>
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  let nama = urlParams.get('to') || '';
+  let pronoun = urlParams.get('p') || 'Dear,';
+  const tundang = urlParams.get('t') || '';
 
-  <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    let nama = urlParams.get('to') || '';
-    let pronoun = urlParams.get('p') || 'Dear,';
-    const tundang = urlParams.get('t') || '';
+  if (pronoun == '1') {
+    pronoun = 'Dear,';
+  }
+  
+  const namaContainer = document.querySelector('#tamu');
+  namafix = nama.replace(/_/g, ' ');
+  namaContainer.innerHTML = `${pronoun}<br><span style='font-size: 1.2em;'>${namafix}</span>`.replace(/ ,$/, ',');
 
-    if(pronoun=='1'){
-    pronoun='Dear,';  
-    }
-    
-    const namaContainer = document.querySelector('#tamu');
-    namafix=nama.replace(/_/g,' ');
-  //  namaContainer.innerText=`${pronoun} \n <span style='font-size: 1.2em;'>${namafix}</span>`.replace(/ ,$/,',');
-    //console.log(nama);
-      namaContainer.innerHTML = `${pronoun}<br><span style='font-size: 1.2em;'>${namafix}</span>`.replace(/ ,$/, ',');
+  if (tundang == '') {
+    document.querySelector('.gifts').style.display = 'none';
+    document.querySelector('.story').style.display = 'none';
+    document.querySelector('.sstory').style.display = 'none';
+  } else if (tundang == '2') {
+    document.querySelector('.story').style.display = 'none';
+    document.querySelector('.sstory').style.display = 'none';
+  }
 
-
-    if(tundang==''){
-      document.querySelector('.gifts').style.display='none';
-      document.querySelector('.story').style.display='none';
-      document.querySelector('.sstory').style.display='none';
-      }else if(tundang=='2'){
-      document.querySelector('.story').style.display='none';
-      document.querySelector('.sstory').style.display='none';
-        
-      }
-
-    document.querySelector('#nama').value=namafix;
-  </script>
+  document.querySelector('#nama').value = namafix;
+</script>
 
 <script>
     // Definisikan objek util
     const util = {
         buka: function (element) {
             // Sembunyikan loading page dengan transisi
+            const loading = document.getElementById('loading');
             loading.style.opacity = '0';
+            setTimeout(() => {
+                loading.style.display = 'none';
+            }, 500);
             // Tampilkan navbar
             document.getElementById('navbar-bottom').classList.remove('hidden');
             // Aktifkan scroll pada body
@@ -603,7 +598,6 @@
         }
     };
 </script>
-
 
 </body>  
 </html>
