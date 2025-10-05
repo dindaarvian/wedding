@@ -208,11 +208,18 @@ body::-webkit-scrollbar {
     object-fit: cover;
 }
 
-
+.cover {
+    content: '';
+    background-size: cover;
+    background-image: url(assets/img/bunga.gif);
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+    inset: 0 !important;
+}
 
 /* Mempelai Section */
 .bg-mempelai {
-    background-image: url("assets/img/bg1.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -483,10 +490,9 @@ footer {
     }
     
     .timeline li .timeline-image {
-        left: 30px;
+        left: -25px;
         transform: translateX(0);
-        width: 60px;
-        height: 60px;
+       
     }
     
     .timeline li .timeline-panel {
@@ -518,6 +524,10 @@ footer {
         background-attachment: scroll;
     }
 
+    .cover {
+        background-attachment: scroll;
+    }
+
     .hero::before {
         background-attachment: scroll;
     }
@@ -526,6 +536,10 @@ footer {
 /* Mobile phones */
 @media (max-width: 576px) {
     .hero {
+        padding: 0.5rem;
+    }
+
+    .cover {
         padding: 0.5rem;
     }
     
@@ -572,4 +586,10 @@ footer {
         width: 10rem;
         height: 10rem;
     }
+
+    .cover {
+        min-height: auto;
+        padding: 2rem 1rem;
+    }
+
 }
