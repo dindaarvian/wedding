@@ -93,34 +93,14 @@ const util = (() => {
         }, 1000);
     };
 
-    // const music = (btn) => {
-    //     if (btn.getAttribute('data-status') !== 'true') {
-    //         btn.setAttribute('data-status', 'true');
-    //         audio.play();
-    //         btn.innerHTML = '<i class="fa-solid fa-circle-pause spin-button"></i>';
-    //     } else {
-    //         btn.setAttribute('data-status', 'false');
-    //         audio.pause();
-    //         btn.innerHTML = '<i class="fa-solid fa-circle-play"></i>';
-    //     }
-    // };
-
     const music = (btn) => {
-        const audio = audioSingleton(); // Gunakan singleton audio
-        const status = btn.getAttribute('data-status') === 'true';
-
-        if (status) {
-            audio.play().then(() => {
-                console.log("Audio started");
-            }).catch(error => {
-                console.error("Error playing audio:", error); // Debug error
-            });
-            btn.setAttribute('data-status', 'false');
+        if (btn.getAttribute('data-status') !== 'true') {
+            btn.setAttribute('data-status', 'true');
+            audio.play();
             btn.innerHTML = '<i class="fa-solid fa-circle-pause spin-button"></i>';
         } else {
+            btn.setAttribute('data-status', 'false');
             audio.pause();
-            console.log("Audio paused"); // Debug untuk memastikan pause dijalankan
-            btn.setAttribute('data-status', 'true');
             btn.innerHTML = '<i class="fa-solid fa-circle-play"></i>';
         }
     };
@@ -193,7 +173,7 @@ const util = (() => {
         }
 
         opacity('welcome');
-        document.getElementById('tombol-musik').style.display = 'block';
+        document.getElementById('tombol-musik').style.opacity = 100;
         timer();
 
         await confetti({
@@ -233,42 +213,21 @@ const util = (() => {
 })();
 
 
-// const audio = (() => {
-//     let audio = null;
-
-//     const singleton = () => {
-//         if (!audio) {
-//             audio = new Audio();
-//             audio.src = document.getElementById('tombol-musik').getAttribute('data-url');
-//             audio.load();
-//             audio.currentTime = 0;
-//             audio.autoplay = true;
-//             audio.muted = false;
-//             audio.loop = true;
-//             audio.volume = 1;
-//         }
-
-//         return audio;
-//     };
-
-//     return {
-//         play: () => singleton().play(),
-//         pause: () => singleton().pause(),
-//     };
-// })();
 const audio = (() => {
     let audio = null;
 
     const singleton = () => {
         if (!audio) {
             audio = new Audio();
-            const url = document.getElementById('tombol-musik')?.getAttribute('data-url') || 'assets/music/lagu.mp3';
-            audio.src = url;
-            audio.preload = 'auto'; // Pastikan audio dimuat sebelum dimainkan
+            audio.src = document.getElementById('tombol-musik').getAttribute('data-url');
+            audio.load();
+            audio.currentTime = 0;
+            audio.autoplay = true;
+            audio.muted = false;
             audio.loop = true;
             audio.volume = 1;
-            audio.onerror = () => console.error("Error loading audio file:", url); // Debug jika file gagal dimuat
         }
+
         return audio;
     };
 
@@ -277,6 +236,7 @@ const audio = (() => {
         pause: () => singleton().pause(),
     };
 })();
+
 
 
 util.show();

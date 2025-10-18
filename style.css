@@ -303,7 +303,8 @@ body::-webkit-scrollbar {
     transform: translateY(-50%) !important;
     width: clamp(40px, 8vw, 50px) !important;
     height: clamp(40px, 8vw, 50px) !important;
-    z-index: 1000 !important;
+    z-index: 10000 !important;
+   background-color:#ff91a4; border: none; padding: 0;
 }
 
 /* Timeline - Enhanced Responsive */

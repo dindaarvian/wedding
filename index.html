@@ -102,7 +102,7 @@
 </section>
     
       <!-- Audio Button -->
-      <button type="button" id="tombol-musik" class="btn rounded-circle" onclick="util.music(this)" data-status="true" data-url="assets/music/lagu.mp3" style="position: fixed; top: 50%; right: 20px; transform: translateY(-50%); box-shadow: 0 4px 8px rgba(0,0,0,0.2); width: 35px; height: 35px; background-color:#ff91a4; border: none; padding: 0;">
+      <button type="button" id="tombol-musik" class="btn rounded-circle" onclick="util.music(this)" data-status="true" data-url="assets/music/lagu.mp3" style="display:inline;">
     <i class="fa-solid fa-circle-pause spin-button"></i>
 </button>
 
@@ -136,7 +136,7 @@
     <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.12.0/tsparticles.confetti.bundle.min.js" integrity="sha256-XG5M9shcLLpu8ct5bVbu6lLVzLpfZChl+csxdyLVP18=" crossorigin="anonymous"></script>
 
 <!--Navbar Bottom-->
-    <!-- <div class="fixed-bottom d-flex justify-content-center" style="bottom: 25px;">
+    <div class="fixed-bottom d-flex justify-content-center" style="bottom: 25px;">
         <div class="d-flex justify-content-around p-2 rounded-4" style="width: 90%; max-width: 400px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); background-color: #f7f7f7;">
             <a class="nav-link text-white text-center py-2 px-3 rounded-3" href="#home" style="background-color: #d67183;">
                 <i class="fa-solid fa-house"></i>
@@ -155,28 +155,7 @@
             </a>
             
         </div>
-    </div> -->
-
-    <!-- Navbar Bottom -->
-    <div class="fixed-bottom d-flex justify-content-center hidden" style="bottom: 25px;" id="navbar-bottom">
-        <div class="d-flex justify-content-around p-2 rounded-4" style="width: 90%; max-width: 400px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); background-color: #f7f7f7;">
-            <a class="nav-link text-white text-center py-2 px-3 rounded-3" href="#home" style="background-color: #d67183;">
-                <i class="fa-solid fa-house"></i>
-            </a>
-            <a class="nav-link text-white text-center py-2 px-3 rounded-3" href="#mempelai" style="background-color: #d67183;">
-                <i class="fa-solid fa-heart"></i>
-            </a>
-            <a class="nav-link text-white text-center py-2 px-3 rounded-3" href="#acara" style="background-color: #d67183;">
-                <i class="fa-solid fa-calendar"></i>
-            </a>
-            <a class="nav-link text-white text-center py-2 px-3 rounded-3" href="#gallery" style="background-color: #d67183;">
-                <i class="fa-solid fa-images"></i>
-            </a>
-            <a class="nav-link text-white text-center py-2 px-3 rounded-3" href="#ucapan" style="background-color: #d67183;">
-                <i class="fa-solid fa-comment"></i>
-            </a>
-        </div>
-    </div>
+    </div> 
 
  <!-- Main Content -->
     <main class="text-light" data-bs-spy="scroll" data-bs-target="#navbar-menus" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
@@ -570,52 +549,16 @@
   namafix = nama.replace(/_/g, ' ');
   namaContainer.innerHTML = `${pronoun}<br><span style='font-size: 1.2em;'>${namafix}</span>`.replace(/ ,$/, ',');
 
-  if (tundang == '') {
-    document.querySelector('.gifts').style.display = 'none';
-    document.querySelector('.story').style.display = 'none';
-    document.querySelector('.sstory').style.display = 'none';
-  } else if (tundang == '2') {
-    document.querySelector('.story').style.display = 'none';
-    document.querySelector('.sstory').style.display = 'none';
-  }
+  // if (tundang == '') {
+  //   document.querySelector('.gifts').style.display = 'none';
+  //   document.querySelector('.story').style.display = 'none';
+  //   document.querySelector('.sstory').style.display = 'none';
+  // } else if (tundang == '2') {
+  //   document.querySelector('.story').style.display = 'none';
+  //   document.querySelector('.sstory').style.display = 'none';
+  // }
 
   document.querySelector('#nama').value = namafix;
 </script>
-
-<script>
-    // Definisikan objek util
-    const util = {
-        buka: function (element) {
-            // Sembunyikan loading page dengan transisi
-            const loading = document.getElementById('loading');
-            loading.style.opacity = '0';
-            setTimeout(() => {
-                loading.style.display = 'none';
-            }, 500);
-            // Tampilkan navbar
-            document.getElementById('navbar-bottom').classList.remove('hidden');
-            // Aktifkan scroll pada body
-            document.body.style.overflowY = 'auto';
-            // Inisialisasi AOS (jika diperlukan)
-            if (typeof AOS !== 'undefined') {
-                AOS.init();
-            }
-        },
-        // Placeholder untuk fungsi lain agar tidak error
-        music: function (element) {
-            console.log("Fungsi music dipanggil");
-            // Tambahkan logika music dari app.js jika ada
-        },
-        modal: function (element) {
-            console.log("Fungsi modal dipanggil");
-            // Tambahkan logika modal dari app.js jika ada
-        },
-        duar: function (element) {
-            console.log("Fungsi duar dipanggil");
-            // Tambahkan logika duar dari app.js jika ada
-        }
-    };
-</script>
-
 </body>  
 </html>
