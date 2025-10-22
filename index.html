@@ -105,6 +105,10 @@
    <link rel="stylesheet" href="style.css">
 </head>
 
+<div id="lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:99999;">
+  <img id="lightbox-img" src="" style="max-width:90%; max-height:80%; border-radius:10px;">
+</div>
+
   <body style="overflow-y: hidden;">
      
 <section id="hero" class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center">
@@ -513,7 +517,7 @@
                   <div class="mb-3">
                     <h5>Ucapkan Sesuatu</h5>
                       <h4 style="font-size: 1rem;">Berikan ucapan dan do'a kepada kedua mempelai</h4></div>
-                    <form class="row row-cols-md-auto g-3 align-items-center justify-content-center" method="POST" action="https://script.google.com/macros/s/AKfycbysBRy1bEDqbKN0ilzHbURnPuZvR9DP_2J2zO5zd4caeAIzh462ci004xva1E_L6byF/exec" id="my-form">
+                    <form class="row row-cols-md-auto g-3 align-items-center justify-content-center" method="POST" action="https://script.google.com/macros/s/AKfycbwDepSmneeFAIjpX6pjKIDbR22MRRVaZz2IQehmrn7MHnLV40TfLVNkaNUKJUvfHUNA/exec" id="my-form">
                     <div class="mb-3">
                         <label for="nama" class="form-label">Nama</label>
                         <input type="text" class="form-control shadow-sm" id="nama" name="nama">
