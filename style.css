@@ -132,8 +132,8 @@ body::-webkit-scrollbar {
 }
 
 .image {
-    width: clamp(15rem, 40vw, 18rem);
-    height: clamp(15rem, 40vw, 18rem);
+    width: clamp(12rem, 40vw, 17rem);
+    height: clamp(12rem, 40vw, 17rem);
     position: relative;
     overflow: hidden;
     margin: 1.5rem auto;
