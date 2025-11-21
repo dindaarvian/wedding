@@ -463,7 +463,7 @@
                             </div>
 
                             <!-- BNI -->
-                            <div class="bsi mb-2 mx-auto text-center" style="position: relative; width:min(100%,18rem); margin-top:1rem;">
+                            <div id="saleh" class="bsi mb-2 mx-auto text-center" style="position: relative; width:min(100%,18rem); margin-top:1rem;">
                               <img src="assets/img/bni.png" alt="bni" style="width:100%; border-radius:10px;">
                               <button type="button" class="copy-btn"
                                 onclick="copyRek('0853511265', this)"
@@ -613,25 +613,26 @@
 <script>
   const urlParams = new URLSearchParams(window.location.search);
   let nama = urlParams.get('to') || '';
-  let pronoun = urlParams.get('p') || 'Dear,';
+  let pronoun = urlParams.get('p') || 'Bapak/Ibu/Saudara/i';
   const tundang = urlParams.get('t') || '';
 
-  if (pronoun == '1') {
-    pronoun = 'Dear,';
-  }
+  if(pronoun=='1'){
+    pronoun='Bapak';  
+    }else if(pronoun=='2'){
+      pronoun='Ibu';
+    }else if(pronoun=='3'){
+      pronoun='Saudara/i';
+    }else{
+      pronon='Bapak/Ibu/Saudara/i';
+    }
   
   const namaContainer = document.querySelector('#tamu');
   namafix = nama.replace(/_/g, ' ');
   namaContainer.innerHTML = `${pronoun}<br><span style='font-size: 1.2em;'>${namafix}</span>`.replace(/ ,$/, ',');
 
-  // if (tundang == '') {
-  //   document.querySelector('.gifts').style.display = 'none';
-  //   document.querySelector('.story').style.display = 'none';
-  //   document.querySelector('.sstory').style.display = 'none';
-  // } else if (tundang == '2') {
-  //   document.querySelector('.story').style.display = 'none';
-  //   document.querySelector('.sstory').style.display = 'none';
-  // }
+   if (tundang == '') {
+     document.querySelector('#saleh').style.display = 'none';
+   }
 
   document.querySelector('#nama').value = namafix;
 </script>
