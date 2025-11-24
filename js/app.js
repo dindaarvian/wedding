@@ -175,6 +175,8 @@ const util = (() => {
         ///opacity('welcome');
         document.getElementById('tombol-musik').style.display = 'block';
         document.getElementById('navbar_baru').style.display = 'block';
+        document.querySelector('.hero').classList.add('bg-changed');
+        
 
         // Panggil fungsi fetch ucapan dari WishesModule yang baru
         if (typeof WishesModule !== 'undefined') { // Cek modul ada
