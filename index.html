@@ -613,7 +613,7 @@
 <script>
   const urlParams = new URLSearchParams(window.location.search);
   let nama = urlParams.get('to') || '';
-  let pronoun = urlParams.get('p') || 'Bapak/Ibu/Saudara/i';
+  let pronoun = urlParams.get('p') || 'Dear, ';
   const tundang = urlParams.get('t') || '';
 
   if(pronoun=='1'){
@@ -623,7 +623,7 @@
     }else if(pronoun=='3'){
       pronoun='Saudara/i';
     }else{
-      pronon='Dear';
+      pronon='Dear, ';
     }
   
   const namaContainer = document.querySelector('#tamu');
