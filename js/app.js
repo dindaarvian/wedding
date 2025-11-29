@@ -176,6 +176,11 @@ const util = (() => {
         document.getElementById('tombol-musik').style.display = 'block';
         document.getElementById('navbar_baru').style.display = 'block';
         document.querySelector('.hero').classList.add('bg-changed');
+
+    //    window.location.hash = '#home';
+
+      // Atau jika Anda ingin navigasi yang lebih halus (smooth scroll)
+      document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
         
 
         // Panggil fungsi fetch ucapan dari WishesModule yang baru
